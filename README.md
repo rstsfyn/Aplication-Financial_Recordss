@@ -1,4 +1,6 @@
 # aplikasikuu
+NPM : 5220411082
+Nama : Restu Sofyan Ma'arif
 
 A new Flutter project.
 
