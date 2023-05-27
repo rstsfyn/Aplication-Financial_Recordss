@@ -102,6 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                               controller: emailController,
                               keyboardType: TextInputType.emailAddress,
                               cursorColor: Colors.white,
+                              style: const TextStyle(color: Colors.white),
                               decoration: const InputDecoration(
                                   labelStyle: (TextStyle(color: Colors.white)),
                                   hintStyle: TextStyle(color: Colors.white),
@@ -140,6 +141,7 @@ class _LoginPageState extends State<LoginPage> {
                               controller: passwordController,
                               obscureText: isObscurePassword,
                               cursorColor: Colors.white,
+                              style: const TextStyle(color: Colors.white),
                               decoration: InputDecoration(
                                 labelStyle:
                                     (const TextStyle(color: Colors.white)),
@@ -191,6 +193,9 @@ class _LoginPageState extends State<LoginPage> {
                               width: double.infinity,
                               child: ElevatedButton(
                                 onPressed: () {
+                                  if (!formKey.currentState!.validate()) {
+                                    return;
+                                  }
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
