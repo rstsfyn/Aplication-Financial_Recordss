@@ -21,37 +21,41 @@ class _GetStartedState extends State<GetStarted> {
               fit: BoxFit.cover),
         ),
         padding: const EdgeInsets.all(25),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 60,
-            ),
-            const Text(
-              'Set your\nFinancial\nGoals',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 60,
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              'Our smart finance app will kepp you\nrecord stats and track',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 15,
+              const Text(
+                'Set your\nFinancial\nGoals',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 500,
-            ),
-            Center(
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'Our smart finance app will kepp you\nrecord stats and track',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+              const SizedBox(
+                height: 500,
+              ),
+              Center(
                 child: TextButton(
                   onPressed: () {
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const LoginPage()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()));
                   },
                   child: const Text(
                     'Get Started',
@@ -62,7 +66,8 @@ class _GetStartedState extends State<GetStarted> {
                   ),
                 ),
               ),
-          ],
+            ],
+          ),
         ),
       ),
     );
